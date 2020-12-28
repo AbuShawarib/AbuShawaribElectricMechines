@@ -17,14 +17,14 @@ public class ElectricComposter extends AContainer implements RecipeDisplayItem {
 
     @Override
     protected void registerDefaultRecipes() {
-        registerRecipe(99999, new ItemStack[] { new ItemStack(Material.STONE, 64) }, new ItemStack[] { new ItemStack(Material.NETHERRACK, 8) });
-        registerRecipe(99999, new ItemStack[] { new ItemStack(Material.SAND, 64) }, new ItemStack[] { new ItemStack(Material.SOUL_SAND, 8) });
+        registerRecipe(90, new ItemStack[] { new ItemStack(Material.STONE, 64) }, new ItemStack[] { new ItemStack(Material.NETHERRACK, 8) });
+        registerRecipe(90, new ItemStack[] { new ItemStack(Material.SAND, 64) }, new ItemStack[] { new ItemStack(Material.SOUL_SAND, 8) });
     }
 
 
     @Override
     public ItemStack getProgressBar() {
-        return new ItemStack(Material.COMPOSTER);
+        return new ItemStack(Material.NETHERITE_HOE);
     }
 
     @Override
