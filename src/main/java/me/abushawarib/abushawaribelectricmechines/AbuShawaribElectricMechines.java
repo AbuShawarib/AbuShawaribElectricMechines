@@ -33,7 +33,6 @@ public class AbuShawaribElectricMechines extends JavaPlugin implements SlimefunA
         ItemStack categoryItem = new CustomItem(Material.GRAY_TERRACOTTA, "&4Bluish Mechines", "", "&a> Click to open");
         NamespacedKey categoryId = new NamespacedKey(this, "bluish_mechines");
         Category category = new Category(categoryId, categoryItem);
-
         // Create a new Slimefun ItemStack (Item Description) for different tiers
         SlimefunItemStack electricComposter1Item = new SlimefunItemStack(
             "ELECTRIC_COMPOSTER_I", Material.COMPOSTER,
@@ -61,10 +60,27 @@ public class AbuShawaribElectricMechines extends JavaPlugin implements SlimefunA
                 new ItemStack(Material.OAK_SLAB),   SlimefunItems.ELECTRIC_MOTOR,       new ItemStack(Material.OAK_SLAB),
                 new ItemStack(Material.OAK_SLAB),   SlimefunItems.HEATING_COIL,         new ItemStack(Material.OAK_SLAB),
                 new ItemStack(Material.OAK_SLAB),   new ItemStack(Material.CAULDRON),   new ItemStack(Material.OAK_SLAB)
-            })
-            .setCapacity(8)
-            .setEnergyConsumption(8)
-            .setProcessingSpeed(1);
+            })  {
+
+                @Override
+                public int getEnergyConsumption() {
+                    return 8;
+                }
+            
+                @Override
+                public int getCapacity() {
+                    return 16;
+                }
+            
+                @Override
+                public int getSpeed() {
+                    return 1;
+                }
+            
+            };
+            // .setCapacity(16)
+            // .setEnergyConsumption(8)
+            // .setProcessingSpeed(1);
             composter1.register(this);
 
             AContainer composter2 = new ElectricComposter(category, electricComposter2Item, RecipeType.ENHANCED_CRAFTING_TABLE, 
@@ -72,16 +88,33 @@ public class AbuShawaribElectricMechines extends JavaPlugin implements SlimefunA
                 null,                               SlimefunItems.MAGNESIUM_SALT,       null,
                 SlimefunItems.CARBON,               electricComposter1Item,             SlimefunItems.CARBON,
                 SlimefunItems.COMPRESSED_CARBON,    SlimefunItems.HEATING_COIL,         SlimefunItems.COMPRESSED_CARBON
-            })
-            .setCapacity(16)
-            .setEnergyConsumption(15)
-            .setProcessingSpeed(2);
+            })  {
+
+                @Override
+                public int getEnergyConsumption() {
+                    return 15;
+                }
+            
+                @Override
+                public int getCapacity() {
+                    return 30;
+                }
+            
+                @Override
+                public int getSpeed() {
+                    return 2;
+                }
+            
+            };
+            // .setCapacity(30)
+            // .setEnergyConsumption(15)
+            // .setProcessingSpeed(2);
             composter2.register(this);
 
             NamespacedKey composter1ResearchKey = new NamespacedKey(this, "electronic_composter_1");
             Research composter1Research = new Research(composter1ResearchKey, 90879848, "Electric Life Cycle I", 1);
-            composter1Research.addItems(composter1);
-            composter1Research.addItems(composter2);
+            composter1Research.addItems(electricComposter1Item);
+            composter1Research.addItems(electricComposter2Item);
             composter1Research.register();
 
             if (cfg.getBoolean("options.electric-composter2")) {
@@ -90,15 +123,32 @@ public class AbuShawaribElectricMechines extends JavaPlugin implements SlimefunA
                     SlimefunItems.MAGNESIUM_SALT,       SlimefunItems.ELECTRIC_MOTOR,       SlimefunItems.MAGNESIUM_SALT,
                     SlimefunItems.COOLING_UNIT,         electricComposter2Item,             SlimefunItems.HEATING_COIL,
                     SlimefunItems.GILDED_IRON,          SlimefunItems.BLISTERING_INGOT_3,     SlimefunItems.GILDED_IRON
-                })
-                .setCapacity(32)
-                .setEnergyConsumption(25)
-                .setProcessingSpeed(4);
+                }) {
+
+                    @Override
+                    public int getEnergyConsumption() {
+                        return 25;
+                    }
+                
+                    @Override
+                    public int getCapacity() {
+                        return 50;
+                    }
+                
+                    @Override
+                    public int getSpeed() {
+                        return 4;
+                    }
+                
+                };
+                // .setCapacity(50)
+                // .setEnergyConsumption(25)
+                // .setProcessingSpeed(4);
                 composter3.register(this);
                 
                 NamespacedKey composter2ResearchKey = new NamespacedKey(this, "electronic_composter_2");
                 Research composter2Research = new Research(composter2ResearchKey, 90874568, "Electric Life Cycle II", 1);
-                composter2Research.addItems(composter3);
+                composter2Research.addItems(electricComposter3Item);
                 composter2Research.register();
             }
         }

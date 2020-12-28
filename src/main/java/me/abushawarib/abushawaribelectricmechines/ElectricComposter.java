@@ -26,14 +26,9 @@ public class ElectricComposter extends AContainer implements RecipeDisplayItem {
     public ItemStack getProgressBar() {
         return new ItemStack(Material.NETHERITE_HOE);
     }
-
-    @Override
-    public String getInventoryTitle() {
-        return "&4Electric Composter";
-    }
-
+    
     @Override
     public String getMachineIdentifier() {
-        return "ELECTRIC_COMPOSTER_I";
+        return "ELECTRIC_COMPOSTER";
     }
 }
