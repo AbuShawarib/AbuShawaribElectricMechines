@@ -1,14 +1,14 @@
 ## CHANGE this to the name of your plugin.
-name: AbuShawaribElectricMechines
+name: BluishMachines
 
 ## CHANGE this to your username.
 author: abushawarib
 
-## CHANGE this to a meaninful but short description of your plugin.
-description: An electric mechines focused addon for slime fun
+## CHANGE this to a meaningful but short description of your plugin.
+description: An electric machines focused addon for slimefun
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
-main: me.abushawarib.abushawaribelectricmechines.AbuShawaribElectricMechines
+main: me.abushawarib.bluishmachines.BluishMachinesPlugin
 
 ## You can change this to link to your website or repository. You can also remove this line if you want to.
 website: https://github.com/AbuShawarib
@@ -20,4 +20,4 @@ depend: [Slimefun]
 version: ${project.version}
 
 ## This is the minimum minecraft version required to run your plugin.
-api-version: 1.14
+api-version: 1.16

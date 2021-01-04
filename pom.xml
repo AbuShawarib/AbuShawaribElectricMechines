@@ -20,11 +20,6 @@
         </repository>
 
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-
-        <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
@@ -48,9 +43,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.16.4-R0.1-SNAPSHOT</version>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.16.3-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
@@ -83,12 +78,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-    
-    
-      <dependency>
-        <groupId>io.avaje</groupId>
-        <artifactId>avaje-jsr305</artifactId>
-        <version>1.0</version>
-      </dependency>
+
     </dependencies>
 </project>
