@@ -25,8 +25,7 @@ public class ElectricComposter extends AContainer implements RecipeDisplayItem {
                              int capacity,
                              int speed,
                              int researchCost,
-                             ItemStack ... recipe)
-    {
+                             ItemStack ... recipe) {
         super(
                 category,
                 new SlimefunItemStack(
