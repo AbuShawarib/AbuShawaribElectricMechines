@@ -52,8 +52,8 @@ public class BluishItems {
                 4,
                 25,
                 SlimefunItems.MAGNESIUM_SALT,       SlimefunItems.ELECTRIC_MOTOR,       SlimefunItems.MAGNESIUM_SALT,
-                SlimefunItems.COOLING_UNIT,         ELECTRIC_COMPOSTER_II.getItem(),      SlimefunItems.HEATING_COIL,
-                SlimefunItems.GILDED_IRON,          SlimefunItems.BLISTERING_INGOT_3,     SlimefunItems.GILDED_IRON
+                SlimefunItems.COOLING_UNIT,         ELECTRIC_COMPOSTER_II.getItem(),    SlimefunItems.HEATING_COIL,
+                SlimefunItems.GILDED_IRON,          SlimefunItems.BLISTERING_INGOT_3,   SlimefunItems.GILDED_IRON
         );
 
         this.COBBLE_GENERATOR_I = new CobbleGen(
@@ -63,9 +63,9 @@ public class BluishItems {
                 "I",
                 1,
                 30,
-                SlimefunItems.MAGNESIUM_SALT,       SlimefunItems.ELECTRIC_MOTOR,       SlimefunItems.MAGNESIUM_SALT,
-                SlimefunItems.COOLING_UNIT,         ELECTRIC_COMPOSTER_II.getItem(),      SlimefunItems.HEATING_COIL,
-                SlimefunItems.GILDED_IRON,          SlimefunItems.BLISTERING_INGOT_3,     SlimefunItems.GILDED_IRON
+                new ItemStack(Material.DIAMOND_PICKAXE),    SlimefunItems.ELECTRIC_MOTOR,       new ItemStack(Material.DIAMOND_PICKAXE),
+                SlimefunItems.COAL_GENERATOR,               SlimefunItems.POWER_CRYSTAL,        SlimefunItems.HEATING_COIL,
+                SlimefunItems.GILDED_IRON,                  SlimefunItems.POWER_CRYSTAL,        SlimefunItems.GILDED_IRON
         );
 
         this.ELECTRIC_COMPOSTER_I  .register(plugin);
